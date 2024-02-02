@@ -1,0 +1,325 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: theme('colors.base.white.0');
+    --background-hover: theme('colors.gray.50.value' / 12%);
+    --background-active: theme('colors.gray.50.value' / 50%);
+    --background-selected: theme('colors.gray.50.value' / 20%);
+    --background-selected-hover: theme('colors.gray.50.value' / 32%);
+    --background-inverse: theme('colors.gray.80.value');
+    --background-inverse-hover: theme('colors.gray.80.hover');
+
+    --layer-01: theme('colors.gray.10.value');
+    --layer-02: theme('colors.base.white.0');
+    --layer-03: theme('colors.gray.10.value');
+    --layer-hover-01: theme('colors.gray.10.hover');
+    --layer-hover-02: theme('colors.gray.10.hover');
+    --layer-hover-03: theme('colors.gray.10.hover');
+    --layer-active-01: theme('colors.gray.30.value');
+    --layer-active-02: theme('colors.gray.30.value');
+    --layer-active-03: theme('colors.gray.30.value');
+    --layer-selected-01: theme('colors.gray.20.value');
+    --layer-selected-02: theme('colors.gray.20.value');
+    --layer-selected-03: theme('colors.gray.20.value');
+    --layer-selected-hover-01: theme('colors.gray.20.hover');
+    --layer-selected-hover-02: theme('colors.gray.20.hover');
+    --layer-selected-hover-03: theme('colors.gray.20.hover');
+    --layer-selected-inverse: theme('colors.gray.100.value');
+    --layer-selected-disabled: theme('colors.gray.50.value');
+
+    --layer-accent-01: theme('colors.gray.20.value');
+    --layer-accent-02: theme('colors.gray.20.value');
+    --layer-accent-03: theme('colors.gray.20.value');
+    --layer-accent-hover-01: theme('colors.gray.20.hover');
+    --layer-accent-hover-02: theme('colors.gray.20.hover');
+    --layer-accent-hover-03: theme('colors.gray.20.hover');
+    --layer-accent-active-01: theme('colors.gray.40.value');
+    --layer-accent-active-02: theme('colors.gray.40.value');
+    --layer-accent-active-03: theme('colors.gray.40.value');
+
+    --field-01: theme('colors.gray.10.value');
+    --field-02: theme('colors.base.white.0');
+    --field-03: theme('colors.gray.10.value');
+    --field-hover-01: theme('colors.gray.10.hover');
+    --field-hover-02: theme('colors.gray.10.hover');
+    --field-hover-03: theme('colors.gray.10.hover');
+
+    --border-subtle-00: theme('colors.gray.20.value');
+    --border-subtle-01: theme('colors.gray.30.value');
+    --border-subtle-02: theme('colors.gray.20.value');
+    --border-subtle-03: theme('colors.gray.30.value');
+    --border-subtle-selected-01: theme('colors.gray.30.value');
+    --border-subtle-selected-02: theme('colors.gray.30.value');
+    --border-subtle-selected-03: theme('colors.gray.30.value');
+    --border-strong-01: theme('colors.gray.50.value');
+    --border-strong-02: theme('colors.gray.50.value');
+    --border-strong-03: theme('colors.gray.50.value');
+    --border-title-01: theme('colors.gray.30.value');
+    --border-title-02: theme('colors.gray.40.value');
+    --border-title-03: theme('colors.gray.30.value');
+    --border-inverse: theme('colors.gray.100.value');
+    --border-disabled: theme('colors.gray.30.value');
+
+    --text-primary: theme('colors.gray.100.value');
+    --text-secondary: theme('colors.gray.70.value');
+    --text-placeholder: theme('colors.gray.40.value');
+    --text-on-color: theme('colors.base.white.0');
+    --text-on-color-disabled: theme('colors.gray.50.value');
+    --text-helper: theme('colors.gray.60.value');
+    --text-error: theme('colors.red.60.value');
+    --text-inverse: theme('colors.base.white.0');
+    --text-disabled: theme('colors.gray.100.value' / 25%);
+
+    --icon-primary: theme('colors.gray.100.value');
+    --icon-secondary: theme('colors.gray.70.value');
+    --icon-on-color: theme('colors.base.white.0');
+    --icon-on-color-disabled: theme('colors.gray.50.value');
+    --icon-inverse: theme('colors.base.white.0');
+    --icon-disabled: theme('colors.gray.100.value' / 25%);
+
+    --button-secondary: theme('colors.gray.80.value');
+    --button-secondary-hover: theme('colors.gray.80.hover');
+    --button-secondary-active: theme('colors.gray.60.value');
+    --button-danger-secondary: theme('colors.red.60.value');
+    --button-danger-hover: theme('colors.red.60.hover');
+    --button-danger-active: theme('colors.red.80.value');
+    --button-separator: theme('colors.gray.20.value');
+    --button-disabled: theme('colors.gray.30.value');
+
+    --support-error: theme('colors.red.60.value');
+    --support-success: theme('colors.green.50.value');
+    --support-warning: theme('colors.yellow.30.value');
+    --support-info: theme('colors.blue.70.value');
+    --support-error-inverse: theme('colors.red.50.value');
+    --support-success-inverse: theme('colors.green.40.value');
+    --support-warning-inverse: theme('colors.yellow.30.value');
+    --support-info-inverse: theme('colors.blue.50.value');
+
+    --overlay: theme('colors.gray.100.value' / 50%);
+    --skeleton-element: theme('colors.gray.30.value');
+    --skeleton-background: theme('colors.gray.10.hover');
+  }
+
+  .gray {
+    --background: theme('colors.gray.10.value');
+    --background-hover: theme('colors.gray.50.value' / 12%);
+    --background-active: theme('colors.gray.50.value' / 50%);
+    --background-selected: theme('colors.gray.50.value' / 20%);
+    --background-selected-hover: theme('colors.gray.50.value' / 32%);
+    --background-inverse: theme('colors.gray.80.value');
+    --background-inverse-hover: theme('colors.gray.80.hover');
+
+    --layer-01: theme('colors.base.white.0');
+    --layer-02: theme('colors.gray.10.value');
+    --layer-03: theme('colors.base.white.0');
+    --layer-hover-01: theme('colors.gray.10.hover');
+    --layer-hover-02: theme('colors.gray.10.hover');
+    --layer-hover-03: theme('colors.gray.10.hover');
+    --layer-active-01: theme('colors.gray.30.value');
+    --layer-active-02: theme('colors.gray.30.value');
+    --layer-active-03: theme('colors.gray.30.value');
+    --layer-selected-01: theme('colors.gray.20.value');
+    --layer-selected-02: theme('colors.gray.20.value');
+    --layer-selected-03: theme('colors.gray.20.value');
+    --layer-selected-hover-01: theme('colors.gray.20.hover');
+    --layer-selected-hover-02: theme('colors.gray.20.hover');
+    --layer-selected-hover-03: theme('colors.gray.20.hover');
+    --layer-selected-inverse: theme('colors.gray.100.value');
+    --layer-selected-disabled: theme('colors.gray.50.value');
+
+    --layer-accent-01: theme('colors.gray.20.value');
+    --layer-accent-02: theme('colors.gray.20.value');
+    --layer-accent-03: theme('colors.gray.20.value');
+    --layer-accent-hover-01: theme('colors.gray.20.hover');
+    --layer-accent-hover-02: theme('colors.gray.20.hover');
+    --layer-accent-hover-03: theme('colors.gray.20.hover');
+    --layer-accent-active-01: theme('colors.gray.40.value');
+    --layer-accent-active-02: theme('colors.gray.40.value');
+    --layer-accent-active-03: theme('colors.gray.40.value');
+
+    --field-01: theme('colors.base.white.0');
+    --field-02: theme('colors.gray.10.value');
+    --field-03: theme('colors.base.white.0');
+    --field-hover-01: theme('colors.gray.10.hover');
+    --field-hover-02: theme('colors.gray.10.hover');
+    --field-hover-03: theme('colors.gray.10.hover');
+
+    --border-subtle-00: theme('colors.gray.30.value');
+    --border-subtle-01: theme('colors.gray.20.value');
+    --border-subtle-02: theme('colors.gray.30.value');
+    --border-subtle-03: theme('colors.gray.20.value');
+    --border-subtle-selected-01: theme('colors.gray.30.value');
+    --border-subtle-selected-02: theme('colors.gray.30.value');
+    --border-subtle-selected-03: theme('colors.gray.30.value');
+    --border-strong-01: theme('colors.gray.50.value');
+    --border-strong-02: theme('colors.gray.50.value');
+    --border-strong-03: theme('colors.gray.50.value');
+    --border-title-01: theme('colors.gray.40.value');
+    --border-title-02: theme('colors.gray.30.value');
+    --border-title-03: theme('colors.gray.40.value');
+    --border-inverse: theme('colors.gray.100.value');
+    --border-disabled: theme('colors.gray.30.value');
+
+    --text-primary: theme('colors.gray.100.value');
+    --text-secondary: theme('colors.gray.70.value');
+    --text-placeholder: theme('colors.gray.40.value');
+    --text-on-color: theme('colors.base.white.0');
+    --text-on-color-disabled: theme('colors.gray.50.value');
+    --text-helper: theme('colors.gray.60.value');
+    --text-error: theme('colors.red.60.value');
+    --text-inverse: theme('colors.base.white.0');
+    --text-disabled: theme('colors.gray.100.value' / 25%);
+
+    --icon-primary: theme('colors.gray.100.value');
+    --icon-secondary: theme('colors.gray.70.value');
+    --icon-on-color: theme('colors.base.white.0');
+    --icon-on-color-disabled: theme('colors.gray.50.value');
+    --icon-inverse: theme('colors.base.white.0');
+    --icon-disabled: theme('colors.gray.100.value' / 25%);
+
+    --button-secondary: theme('colors.gray.80.value');
+    --button-secondary-hover: theme('colors.gray.80.hover');
+    --button-secondary-active: theme('colors.gray.60.value');
+    --button-danger-secondary: theme('colors.red.60.value');
+    --button-danger-hover: theme('colors.red.60.hover');
+    --button-danger-active: theme('colors.red.80.value');
+    --button-separator: theme('colors.gray.20.value');
+    --button-disabled: theme('colors.gray.30.value');
+
+    --support-error: theme('colors.red.60.value');
+    --support-success: theme('colors.green.50.value');
+    --support-warning: theme('colors.yellow.30.value');
+    --support-info: theme('colors.blue.70.value');
+    --support-error-inverse: theme('colors.red.50.value');
+    --support-success-inverse: theme('colors.green.40.value');
+    --support-warning-inverse: theme('colors.yellow.30.value');
+    --support-info-inverse: theme('colors.blue.50.value');
+
+    --overlay: theme('colors.gray.100.value' / 50%);
+    --skeleton-element: theme('colors.gray.30.value');
+    --skeleton-background: theme('colors.gray.10.hover');
+  }
+
+  .dark {
+    --background: theme('colors.gray.100.value');
+    --background-hover: theme('colors.gray.50.value' / 16%);
+    --background-active: theme('colors.gray.50.value' / 40%);
+    --background-selected: theme('colors.gray.50.value' / 24%);
+    --background-selected-hover: theme('colors.gray.50.value' / 32%);
+    --background-inverse: theme('colors.gray.10.value');
+    --background-inverse-hover: theme('colors.gray.10.hover');
+
+    --layer-01: theme('colors.gray.90.value');
+    --layer-02: theme('colors.gray.80.value');
+    --layer-03: theme('colors.gray.70.value');
+    --layer-hover-01: theme('colors.gray.90.hover');
+    --layer-hover-02: theme('colors.gray.80.hover');
+    --layer-hover-03: theme('colors.gray.70.hover');
+    --layer-active-01: theme('colors.gray.70.value');
+    --layer-active-02: theme('colors.gray.60.value');
+    --layer-active-03: theme('colors.gray.50.value');
+    --layer-selected-01: theme('colors.gray.80.value');
+    --layer-selected-02: theme('colors.gray.70.value');
+    --layer-selected-03: theme('colors.gray.60.value');
+    --layer-selected-hover-01: theme('colors.gray.80.hover');
+    --layer-selected-hover-02: theme('colors.gray.70.hover');
+    --layer-selected-hover-03: theme('colors.gray.60.hover');
+    --layer-selected-inverse: theme('colors.gray.10.value');
+    --layer-selected-disabled: theme('colors.gray.60.value');
+
+    --layer-accent-01: theme('colors.gray.80.value');
+    --layer-accent-02: theme('colors.gray.70.value');
+    --layer-accent-03: theme('colors.gray.60.value');
+    --layer-accent-hover-01: theme('colors.gray.80.hover');
+    --layer-accent-hover-02: theme('colors.gray.70.hover');
+    --layer-accent-hover-03: theme('colors.gray.60.hover');
+    --layer-accent-active-01: theme('colors.gray.70.value');
+    --layer-accent-active-02: theme('colors.gray.50.value');
+    --layer-accent-active-03: theme('colors.gray.80.value');
+
+    --field-01: theme('colors.gray.90.value');
+    --field-02: theme('colors.gray.80.value');
+    --field-03: theme('colors.gray.70.value');
+    --field-hover-01: theme('colors.gray.90.hover');
+    --field-hover-02: theme('colors.gray.80.hover');
+    --field-hover-03: theme('colors.gray.70.hover');
+
+    --border-subtle-00: theme('colors.gray.80.value');
+    --border-subtle-01: theme('colors.gray.80.value');
+    --border-subtle-02: theme('colors.gray.70.value');
+    --border-subtle-03: theme('colors.gray.60.value');
+    --border-subtle-selected-01: theme('colors.gray.70.value');
+    --border-subtle-selected-02: theme('colors.gray.60.value');
+    --border-subtle-selected-03: theme('colors.gray.50.value');
+    --border-strong-01: theme('colors.gray.60.value');
+    --border-strong-02: theme('colors.gray.50.value');
+    --border-strong-03: theme('colors.gray.40.value');
+    --border-title-01: theme('colors.gray.70.value');
+    --border-title-02: theme('colors.gray.60.value');
+    --border-title-03: theme('colors.gray.50.value');
+    --border-inverse: theme('colors.gray.10.value');
+    --border-disabled: theme('colors.gray.50.value' / 50%);
+
+    --text-primary: theme('colors.gray.10.value');
+    --text-secondary: theme('colors.gray.30.value');
+    --text-placeholder: theme('colors.gray.60.value');
+    --text-on-color: theme('colors.base.white.0');
+    --text-on-color-disabled: theme('colors.base.white.0' / 25%);
+    --text-helper: theme('colors.gray.50.value');
+    --text-error: theme('colors.red.40.value');
+    --text-inverse: theme('colors.gray.100.value');
+    --text-disabled: theme('colors.gray.10.value' / 25%);
+
+    --icon-primary: theme('colors.gray.10.value');
+    --icon-secondary: theme('colors.gray.30.value');
+    --icon-on-color: theme('colors.base.white.0');
+    --icon-on-color-disabled: theme('colors.base.white.0' / 25%);
+    --icon-inverse: theme('colors.gray.100.value');
+    --icon-disabled: theme('colors.gray.10.value' / 25%);
+
+    --button-secondary: theme('colors.gray.60.value');
+    --button-secondary-hover: theme('colors.gray.60.hover');
+    --button-secondary-active: theme('colors.gray.80.value');
+    --button-danger-secondary: theme('colors.red.50.value');
+    --button-danger-hover: theme('colors.red.60.hover');
+    --button-danger-active: theme('colors.red.80.value');
+    --button-separator: theme('colors.gray.100.value');
+    --button-disabled: theme('colors.gray.70.value');
+
+    --support-error: theme('colors.red.50.value');
+    --support-success: theme('colors.green.40.value');
+    --support-warning: theme('colors.yellow.30.value');
+    --support-info: theme('colors.blue.50.value');
+    --support-error-inverse: theme('colors.red.60.value');
+    --support-success-inverse: theme('colors.green.50.value');
+    --support-warning-inverse: theme('colors.yellow.30.value');
+    --support-info-inverse: theme('colors.blue.70.value');
+
+    --overlay: theme('colors.gray.100.value' / 70%);
+    --skeleton-element: theme('colors.gray.70.value');
+    --skeleton-background: theme('colors.gray.80.hover');
+  }
+}
+
+@layer base {
+  * {
+    /* @apply border-border; */
+  }
+  body {
+    /* @apply bg-background text-foreground overscroll-none; */
+    @apply bg-background text-text-primary overscroll-none;
+  }
+  #root {
+    @apply h-screen;
+  }
+  .hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
